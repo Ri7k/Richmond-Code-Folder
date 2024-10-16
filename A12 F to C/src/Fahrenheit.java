@@ -16,4 +16,5 @@ public class Fahrenheit {
 	public void print( ) {
 		System.out.println(answer);
 	}
+
 }
