@@ -6,8 +6,21 @@
 import java.util.*;
 public class App {
     public static void main(String[] args) throws Exception {
-        int[] names = new int[10];
-        
+      List<String> hatNames = new ArrayList<>();
+      Scanner myNames = new Scanner(System.in);
+      int i = 0;
+      while (i < 10){
+        System.out.println("add a name");
+        String a = myNames.nextLine();
+        hatNames.add(a);
+        i++;
+      }
+      System.out.println(hatNames);
+      while (hatNames.size() = 1){
+        int rando = (int) Math.random(); 
+        hatNames.remove(rando);
+      }
+
     }
 }
 
