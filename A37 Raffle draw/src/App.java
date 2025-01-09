@@ -16,11 +16,17 @@ public class App {
         i++;
       }
       System.out.println(hatNames);
-      while (hatNames.size() = 1){
-        int rando = (int) Math.random(); 
-        hatNames.remove(rando);
+      int f = 10;
+      Random rand = new Random();
+      while (f > 1){
+        for (int u = 0; u <= 10; i++){
+          int ranInt = rand.nextInt(9 - u);
+          String elimName = hatNames.remove(ranInt);
+          System.out.println(elimName);
+        }
+        f--;
       }
-
+      System.out.println(hatNames);
     }
 }
 
