@@ -16,15 +16,23 @@ public class App {
         i++;
       }
       System.out.println(hatNames);
-      int f = 10;
+
       Random rand = new Random();
-      while (f > 1){
-        for (int u = 0; u <= 10; i++){
-          int ranInt = rand.nextInt(9 - u);
+      int f = 0;
+      if (f > hatNames.size())
+      while (hatNames.size() > 1){
+        for (int u = 10; u >= 10; u--){
+          if (f > hatNames.size()){
+            int ranInt = rand.nextInt(f);
+            
           String elimName = hatNames.remove(ranInt);
-          System.out.println(elimName);
+          System.out.println("The name: " + elimName + " has been removed");
+          }
+          else {
+            String elimName = hatNames.remove(2); 
+          System.out.println("The name: " + elimName + " has been removed");
+          }
         }
-        f--;
       }
       System.out.println(hatNames);
     }
