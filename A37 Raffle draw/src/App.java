@@ -1,7 +1,7 @@
 // Richmond Meana
 // Mr Fox
 // 12/11/2024
-// A37 - Reverse Raffle draw 
+// A37 - Reverse Raffle Draw 
 
 import java.util.*;
 public class App {
@@ -9,32 +9,28 @@ public class App {
       List<String> hatNames = new ArrayList<>();
       Scanner myNames = new Scanner(System.in);
       int i = 0;
+      System.out.println("Welcome to the Reverse Raffle Draw " + "\nThe name that is last picked will be the winner for this draw!");
       while (i < 10){
-        System.out.println("add a name");
+        System.out.println();
+        System.out.println("Please add a name: ");
+        
         String a = myNames.nextLine();
         hatNames.add(a);
         i++;
       }
-      System.out.println(hatNames);
+      System.out.println("This hat contains the names: " + hatNames);
 
+      for(int f = 10; f>1; f--) {
       Random rand = new Random();
-      int f = 0;
-      if (f > hatNames.size())
-      while (hatNames.size() > 1){
-        for (int u = 10; u >= 10; u--){
-          if (f > hatNames.size()){
-            int ranInt = rand.nextInt(f);
-            
-          String elimName = hatNames.remove(ranInt);
-          System.out.println("The name: " + elimName + " has been removed");
-          }
-          else {
-            String elimName = hatNames.remove(2); 
-          System.out.println("The name: " + elimName + " has been removed");
-          }
-        }
+      for (int u = 10; u >= 10; u--){
+          int ranInt = rand.nextInt(0,hatNames.size());
+        String elimName = hatNames.remove(ranInt);
+        System.out.println();
+        System.out.println("The name " + "\"" + elimName + "\"" + " has been removed");   
       }
-      System.out.println(hatNames);
+    }
+      System.out.println();
+      System.out.println("The winner of this draw is: " + hatNames);
     }
 }
 
